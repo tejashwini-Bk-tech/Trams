@@ -3,62 +3,95 @@
   position: relative;
   width: 100%;
   max-width: 1844px;
-  aspect-ratio: 1844 / 560;
-  flex: none;
-  order: 1;
-  flex-grow: 0;
-  padding: 0;
+  margin: 0 auto;
+  padding: clamp(40px, 6vw, 96px) clamp(16px, 4vw, 48px) clamp(32px, 4vw, 64px);
   overflow: hidden;
 }
 
 .hero-container {
   position: relative;
   width: 100%;
-  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .hero-content {
-  position: static;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  max-width: 1300px;
+  margin: 0 auto;
 }
 
 .hero-title {
-  position: absolute;
-  width: 1305px;
-  height: 378px;
-  left: 308px;
-  top: 243px;
-  font-family: 'Gerbil';
+  width: 100%;
+  max-width: 1100px;
+  font-family: var(--heading);
   font-style: normal;
   font-weight: 400;
-  font-size: 100px;
-  line-height: 126px;
-  margin: 0;
+  font-size: var(--fs-hero);
+  line-height: 1.2;
+  animation: fadeInUp 0.8s ease-out forwards;
   text-align: center;
   color: #000000;
 }
 
-.hero-description {
+.hl {
+  position: relative;
+  white-space: nowrap;
+}
+
+/* Pink / green marker pills behind a word */
+.hl-pink,
+.hl-green {
+  padding: 0 0.18em;
+  border-radius: 0.6em;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+
+.hl-pink {
+  background: #f7b8dc;
+}
+
+.hl-green {
+  background: #c2e6c0;
+}
+
+/* Hand-drawn gold underline swoosh under a word */
+.hl-underline::after {
+  content: "";
   position: absolute;
-  width: 831px;
-  height: 72px;
-  left: 545px;
-  top: 648px;
+  left: -0.04em;
+  right: -0.04em;
+  bottom: -0.12em;
+  height: 0.28em;
+  background: url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20200%2018'%20preserveAspectRatio='none'%3E%3Cpath%20d='M3%2013%20C%2050%204,%20150%204,%20197%2010'%20stroke='%23E6B23F'%20stroke-width='4'%20fill='none'%20stroke-linecap='round'/%3E%3C/svg%3E") no-repeat center bottom;
+  background-size: 100% 100%;
+}
+
+.hero-description {
+  width: 100%;
+  max-width: 720px;
   font-family: 'Satoshi';
   font-style: normal;
   font-weight: 400;
-  font-size: 24px;
-  line-height: 36px;
-  margin: 0;
+  font-size: clamp(14px, 1.3vw, 24px);
+  line-height: 1.5;
+  margin: clamp(16px, 2vw, 32px) auto 0;
   text-align: center;
   color: #000000;
 }
 
 .hero-images {
-  position: absolute;
-  width: 1844px;
-  height: 453px;
-  left: 38px;
-  top: 801px;
+  position: relative;
+  width: 100%;
+  max-width: 1500px;
+  margin: clamp(32px, 4vw, 64px) auto 0;
+  height: clamp(170px, 18vw, 320px);
 }
 
 .hero-image-group {
@@ -70,33 +103,59 @@
 .hero-image-pair {
   position: absolute;
   display: flex;
-  gap: clamp(16px, 2vw, 32px);
+  gap: clamp(12px, 1.6vw, 24px);
   align-items: center;
 }
 
 .hero-image-pair img {
-  width: 226px;
-  height: 226px;
+  width: clamp(78px, 8vw, 150px);
+  height: clamp(78px, 8vw, 150px);
   border-radius: 50%;
   object-fit: cover;
 }
 
 .hero-image-pair:nth-child(1) {
-  left: 38px;
-  top: 195px;
+  left: 0;
+  top: 45%;
 }
 
 .hero-image-pair:nth-child(2) {
-  left: 553px;
+  left: 28%;
   top: 0;
 }
 
 .hero-image-pair:nth-child(3) {
-  left: 977px;
-  top: 55px;
+  left: 51%;
+  top: 12%;
 }
 
 .hero-image-pair:nth-child(4) {
-  left: 1414px;
+  right: 0;
   top: 0;
+}
+
+/* Stack the photos in a centered, wrapping row on small screens so they
+   never overlap or spill off-screen. */
+@media (max-width: 768px) {
+  .hero-images {
+    height: auto;
+  }
+
+  .hero-image-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: clamp(12px, 3vw, 20px);
+    height: auto;
+  }
+
+  .hero-image-pair {
+    position: static;
+  }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
 }

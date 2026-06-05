@@ -24,8 +24,8 @@ function testimonial() {
 
                     <div className="testimonials-center">
                         <div className="testimonial-content">
-                            <h2 className="testimonial-title">What our customer says About Us</h2>
-                            <p className="testimonial-quote">Elementum delivered the site with inthe timeline as they requested. Inthe end, the client found a 50% increase in traffic with in days since its launch. They also had an impressive ability to use technologies that the company hasn`t used, which have also proved to be easy to use and reliable</p>
+                  <h2 className="testimonial-title">What Our Customers Say</h2>
+          <p className="testimonial-quote">Elementum delivered the site on schedule and exceeded expectations. Within days of launch, the client saw a 50% traffic increase. The team introduced modern technologies the company hadn’t used before, which proved easy to adopt and highly reliable.</p>
                         </div>
                     </div>
 

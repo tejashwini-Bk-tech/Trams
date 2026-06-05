@@ -1,0 +1,253 @@
+/* Services/About Section */
+.services {
+  width: 100%;
+  padding: 0 0 96px;
+  color: #000;
+}
+
+.services-container {
+  width: 100%;
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 0 159px 0 161px;
+}
+
+.services-header {
+  width: 869px;
+  height: 232px;
+  margin: 0 0 116px;
+  opacity: 1;
+}
+
+.services-title {
+  width: 831px;
+  font-family: Gerbil, system-ui, "Segoe UI", Roboto, sans-serif;
+  font-size: 100px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 116px;
+  letter-spacing: 0;
+  color: #000;
+  text-align: left;
+  margin: 0;
+}
+
+.services-list {
+  display: flex;
+  flex-direction: column;
+  gap: 52px;
+}
+
+.service-item {
+  display: grid;
+  grid-template-columns: 226px 230px 923px 140px 81px;
+  align-items: center;
+  width: 100%;
+  min-height: 116px;
+  opacity: 1;
+}
+
+.service-tag {
+  width: 226px;
+  height: 84px;
+  font-family: Satoshi, system-ui, "Segoe UI", Roboto, sans-serif;
+  font-size: 30px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 42px;
+  letter-spacing: 0;
+  color: #000;
+  overflow: hidden;
+}
+
+.service-name {
+  grid-column: 3;
+  width: 923px;
+  height: 116px;
+  font-family: Gerbil, system-ui, "Segoe UI", Roboto, sans-serif;
+  font-size: 56px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 116px;
+  letter-spacing: 0;
+  color: #000;
+  text-align: left;
+  margin: 0;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.service-link {
+  grid-column: 5;
+  position: relative;
+  display: block;
+  width: 81px;
+  height: 24px;
+  font-size: 0;
+  line-height: 0;
+  text-decoration: none;
+}
+
+.service-link::before {
+  content: "";
+  position: absolute;
+  top: 11px;
+  left: 0;
+  width: 81px;
+  height: 0;
+  border-top: 2px solid #000000;
+}
+
+.service-link::after {
+  content: "";
+  position: absolute;
+  top: 6px;
+  right: 0;
+  width: 10px;
+  height: 10px;
+  border-top: 2px solid #000000;
+  border-right: 2px solid #000000;
+  transform: rotate(45deg);
+}
+
+.service-link .arrow {
+  position: absolute;
+  top: 11px;
+  left: 0;
+  display: block;
+  width: 81px;
+  height: 0;
+  border-top: 2px solid #000000;
+}
+
+.service-link .arrow::after {
+  content: "";
+  position: absolute;
+  top: -6px;
+  right: 0;
+  width: 10px;
+  height: 10px;
+  border-top: 2px solid #000000;
+  border-right: 2px solid #000000;
+  transform: rotate(45deg);
+  transform-origin: center;
+}
+
+@media (max-width: 1500px) {
+  .services-container {
+    padding: 0 80px;
+  }
+
+  .service-item {
+    grid-template-columns: 226px minmax(0, 1fr) 81px;
+    column-gap: 80px;
+  }
+
+  .service-name {
+    width: auto;
+  }
+}
+
+@media (max-width: 1024px) {
+  .services {
+    padding-bottom: 72px;
+  }
+
+  .services-container {
+    padding: 0 40px;
+  }
+
+  .services-header {
+    width: 100%;
+    height: auto;
+    margin-bottom: 64px;
+  }
+
+  .services-title {
+    width: min(831px, 100%);
+    font-size: 64px;
+    line-height: 74px;
+  }
+
+  .service-item {
+    grid-template-columns: 180px minmax(0, 1fr) 81px;
+    column-gap: 36px;
+  }
+
+  .service-tag {
+    width: 180px;
+    font-size: 22px;
+    line-height: 31px;
+  }
+
+  .service-name {
+    height: auto;
+    font-size: 42px;
+    line-height: 58px;
+    white-space: normal;
+  }
+}
+
+@media (max-width: 768px) {
+  .services {
+    padding-bottom: 56px;
+  }
+
+  .services-container {
+    padding: 0 20px;
+  }
+
+  .services-title {
+    font-size: 46px;
+    line-height: 54px;
+  }
+
+  .services-list {
+    gap: 40px;
+  }
+
+  .service-item {
+    grid-template-columns: minmax(0, 1fr) 81px;
+    column-gap: 24px;
+    row-gap: 12px;
+  }
+
+  .service-tag {
+    grid-column: 1 / -1;
+    width: min(226px, 100%);
+    height: auto;
+    font-size: 24px;
+    line-height: 34px;
+  }
+
+  .service-name {
+    width: auto;
+    font-size: 34px;
+    line-height: 44px;
+  }
+}
+
+@media (max-width: 480px) {
+  .services-container {
+    padding: 0 16px;
+  }
+
+  .services-title {
+    font-size: 38px;
+    line-height: 46px;
+  }
+
+  .service-item {
+    grid-template-columns: minmax(0, 1fr) 64px;
+  }
+
+  .service-name {
+    font-size: 28px;
+    line-height: 36px;
+  }
+
+  .service-link,
+  .service-link .arrow {
+    width: 64px;
+  }
+}

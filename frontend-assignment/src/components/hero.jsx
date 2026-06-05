@@ -14,7 +14,9 @@ function hero() {
             <section className="hero">
                 <div className="hero-container">
                     <div className="hero-content">
-                        <h1 className="hero-title">The thinkers and doers were changing the status Quo with</h1>
+                        <h1 className="hero-title">
+                            The <span className="hl hl-underline">thinkers</span> and doers were <span className="hl hl-pink">changing</span> the <span className="hl hl-green">status</span> Quo with
+                        </h1>
                         <p className="hero-description">We are a team of strategists, designers communicators, researchers. Togeather, we belive that progress only happens when you refuse to play things safe.</p>
                     </div>
                     <div className="hero-images">

@@ -29,12 +29,12 @@
 .hero-title {
   width: 100%;
   max-width: 1100px;
-  font-family: 'Gerbil';
+  font-family: var(--heading);
   font-style: normal;
   font-weight: 400;
-  font-size: clamp(40px, 5.42vw, 100px);
+  font-size: var(--fs-hero);
   line-height: 1.2;
-  margin: 0;
+  animation: fadeInUp 0.8s ease-out forwards;
   text-align: center;
   color: #000000;
 }
@@ -153,4 +153,9 @@
   .hero-image-pair {
     position: static;
   }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
 }

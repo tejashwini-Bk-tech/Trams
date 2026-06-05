@@ -1,3 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Outfit:wght@400;500&display=swap');
+
+/* Tailwind directives */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Design system */
 :root {
   --text: #6b6375;
   --text-h: #08060d;
@@ -8,42 +16,42 @@
   --accent-bg: rgba(170, 59, 255, 0.1);
   --accent-border: rgba(170, 59, 255, 0.5);
   --social-bg: rgba(244, 243, 236, 0.5);
-  --shadow:
-    rgba(0, 0, 0, 0.1) 0 10px 15px -3px, rgba(0, 0, 0, 0.05) 0 4px 6px -2px;
+  --shadow: rgba(0,0,0,0.1) 0 10px 15px -3px, rgba(0,0,0,0.05) 0 4px 6px -2px;
 
-  --sans: system-ui, "Segoe UI", Roboto, sans-serif;
-  --heading: system-ui, "Segoe UI", Roboto, sans-serif;
+  --sans: 'Inter', sans-serif;
+  --heading: 'Outfit', sans-serif;
   --mono: ui-monospace, Consolas, monospace;
 
-  font: 18px/145% var(--sans);
-  letter-spacing: 0.18px;
-  color-scheme: light dark;
-  color: var(--text);
-  background: var(--bg);
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  /* Typography scale */
+  --fs-xs: clamp(12px, 1vw, 14px);
+  --fs-sm: clamp(14px, 1.2vw, 16px);
+  --fs-md: clamp(18px, 1.5vw, 20px);
+  --fs-lg: clamp(24px, 2vw, 32px);
+  --fs-xl: clamp(32px, 3vw, 48px);
+  --fs-hero: clamp(40px, 5.42vw, 100px);
+}
 
-  @media (max-width: 1024px) {
+@media (max-width: 1024px) {
+  :root {
     font-size: 16px;
   }
 }
 
+/* Global resets */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-html,
-body {
+html, body {
   margin: 0;
   padding: 0;
   width: 100%;
   overflow-x: hidden;
 }
 
+/* Dark mode */
 @media (prefers-color-scheme: dark) {
   :root {
     --text: #9ca3af;
@@ -55,8 +63,7 @@ body {
     --accent-bg: rgba(192, 132, 252, 0.15);
     --accent-border: rgba(192, 132, 252, 0.5);
     --social-bg: rgba(47, 48, 58, 0.5);
-    --shadow:
-      rgba(0, 0, 0, 0.4) 0 10px 15px -3px, rgba(0, 0, 0, 0.25) 0 4px 6px -2px;
+    --shadow: rgba(0,0,0,0.4) 0 10px 15px -3px, rgba(0,0,0,0.25) 0 4px 6px -2px;
   }
 
   #social .button-icon {
@@ -64,20 +71,9 @@ body {
   }
 }
 
-body {
-  margin: 0;
-}
-
-#root {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  box-sizing: border-box;
-}
-
-h1,
-h2 {
-  font-family: Gerbil, system-ui, "Segoe UI", Roboto, sans-serif;
+/* Base typography */
+h1, h2 {
+  font-family: var(--heading);
   font-weight: 400;
   font-style: normal;
   color: var(--text-h);
@@ -85,48 +81,4 @@ h2 {
   letter-spacing: 0;
 }
 
-h1 {
-  font-size: 100px;
-  line-height: 126px;
-  margin: 32px 0;
-  @media (max-width: 1024px) {
-    font-size: 56px;
-    line-height: 68px;
-    margin: 20px 0;
-  }
-  @media (max-width: 768px) {
-    font-size: 40px;
-    line-height: 48px;
-  }
-}
-h2 {
-  font-size: 100px;
-  line-height: 126px;
-  margin: 0 0 8px;
-  @media (max-width: 1024px) {
-    font-size: 56px;
-    line-height: 68px;
-  }
-  @media (max-width: 768px) {
-    font-size: 40px;
-    line-height: 48px;
-  }
-}
-p {
-  margin: 0;
-}
-
-code,
-.counter {
-  font-family: var(--mono);
-  display: inline-flex;
-  border-radius: 4px;
-  color: var(--text-h);
-}
-
-code {
-  font-size: 15px;
-  line-height: 135%;
-  padding: 4px 8px;
-  background: var(--code-bg);
-}
+/* Retain existing component styles – they remain in their own files */

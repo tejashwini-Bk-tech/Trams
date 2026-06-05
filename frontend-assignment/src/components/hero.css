@@ -27,13 +27,16 @@
 }
 
 .hero-title {
-  width: 100%;
-  max-width: 1100px;
+  position: absolute;
+  width: 70.77%;
+  height: 37.39%;
+  left: 16.7%;
+  top: 10%;
   font-family: 'Gerbil';
   font-style: normal;
   font-weight: 400;
   font-size: clamp(40px, 5.42vw, 100px);
-  line-height: 1.2;
+  line-height: 1.26;
   margin: 0;
   text-align: center;
   color: #000000;
@@ -65,33 +68,26 @@
 .hl-underline::after {
   content: "";
   position: absolute;
-  left: -0.04em;
-  right: -0.04em;
-  bottom: -0.12em;
-  height: 0.28em;
-  background: url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20200%2018'%20preserveAspectRatio='none'%3E%3Cpath%20d='M3%2013%20C%2050%204,%20150%204,%20197%2010'%20stroke='%23E6B23F'%20stroke-width='4'%20fill='none'%20stroke-linecap='round'/%3E%3C/svg%3E") no-repeat center bottom;
-  background-size: 100% 100%;
-}
-
-.hero-description {
-  width: 100%;
-  max-width: 720px;
+  width: 45.07%;
+  height: 7.12%;
+  left: 29.56%;
+  top: 40%;
   font-family: 'Satoshi';
   font-style: normal;
   font-weight: 400;
   font-size: clamp(14px, 1.3vw, 24px);
   line-height: 1.5;
-  margin: clamp(16px, 2vw, 32px) auto 0;
+  margin: 0;
   text-align: center;
   color: #000000;
 }
 
 .hero-images {
-  position: relative;
+  position: absolute;
   width: 100%;
-  max-width: 1500px;
-  margin: clamp(32px, 4vw, 64px) auto 0;
-  height: clamp(170px, 18vw, 320px);
+  height: 38%;
+  left: 0;
+  top: 46%;
 }
 
 .hero-image-group {
@@ -103,34 +99,34 @@
 .hero-image-pair {
   position: absolute;
   display: flex;
-  gap: clamp(12px, 1.6vw, 24px);
+  gap: clamp(16px, 2vw, 32px);
   align-items: center;
 }
 
 .hero-image-pair img {
-  width: clamp(78px, 8vw, 150px);
-  height: clamp(78px, 8vw, 150px);
+  width: 226px;
+  height: 226px;
   border-radius: 50%;
   object-fit: cover;
 }
 
 .hero-image-pair:nth-child(1) {
   left: 0;
-  top: 45%;
+  top: 30%;
 }
 
 .hero-image-pair:nth-child(2) {
-  left: 28%;
+  left: 553px;
   top: 0;
 }
 
 .hero-image-pair:nth-child(3) {
   left: 51%;
-  top: 12%;
+  top: 8%;
 }
 
 .hero-image-pair:nth-child(4) {
-  right: 0;
+  left: 1414px;
   top: 0;
 }
 

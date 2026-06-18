@@ -43,7 +43,19 @@
   justify-content: center;
   align-items: center;
 }
-
+.hl-green {
+  background: #c2e6c0;
+}
+.hl-underline::after {
+  content: "";
+  position: absolute;
+  left: -0.04em;
+  right: -0.04em;
+  bottom: -0.12em;
+  height: 0.28em;
+  background-image: url(../assets/Vector5.png);
+  background-size: 100% 100%;
+}
 .testimonial-content {
   text-align: center;
   display: flex;

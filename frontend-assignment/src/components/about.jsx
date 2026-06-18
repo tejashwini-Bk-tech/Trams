@@ -1,12 +1,13 @@
-import './about.css';
+import './about.css';import featureImage from '../assets/vector 2516.png';
 
 function about() {
     return (
         <>
             <section className="services">
+                <img src={featureImage} alt="" className="about-vector" />
                 <div className="services-container">
                     <div className="services-header">
-                        <h2 className="services-title">What we can offer you!</h2>
+                        <h2 className="services-title">What we <span className="hl hl-green">can</span> <span className="hl hl-underline">offer</span> you!</h2>
                     </div>
 
                     <div className="services-list">

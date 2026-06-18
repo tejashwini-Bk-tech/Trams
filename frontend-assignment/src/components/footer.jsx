@@ -12,7 +12,7 @@ function footer() {
                             <p>To make your stay special and even more memorable</p>
                         </div>
                         <div className="newsletter-form">
-                            <input type="email" placeholder="Enter your email" />
+                            
                             <button>Subscribe Now</button>
                         </div>
                     </div>

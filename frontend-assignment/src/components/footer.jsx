@@ -1,6 +1,6 @@
 import './footer.css';
-import line from '../assets/vector 2518.png';
-import line1 from '../assets/vector 2518.png';
+import line from '../assets/Vector 2518.png';
+import line1 from '../assets/Vector 2518.png';
 import vector from '../assets/Ellipse 739.png';
 
 function footer() {

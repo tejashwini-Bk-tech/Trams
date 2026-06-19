@@ -1,8 +1,8 @@
 import featureImage1 from '../assets/features/image 348.png';
 import featureImage2 from '../assets/features/image 348 (1).png';
-import featureImage3 from '../assets/polygon 1.png';
-import featureImage4 from '../assets/polygon 3.png';
-import featureImage from '../assets/vector 2517.png';
+import featureImage3 from '../assets/Polygon 1.png';
+import featureImage4 from '../assets/Polygon 3.png';
+import featureImage from '../assets/Vector 2517.png';
 import './features.css';
 
 function features() {

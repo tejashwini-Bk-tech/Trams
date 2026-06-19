@@ -1,4 +1,4 @@
-import './about.css';import featureImage from '../assets/vector 2516.png';
+import './about.css';import featureImage from '../assets/Vector 2516.png';
 
 function about() {
     return (

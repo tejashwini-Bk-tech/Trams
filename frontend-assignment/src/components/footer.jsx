@@ -1,4 +1,7 @@
 import './footer.css';
+import line from '../assets/vector 2518.png';
+import line1 from '../assets/vector 2518.png';
+import vector from '../assets/Ellipse 739.png';
 
 function footer() {
     return (
@@ -6,6 +9,9 @@ function footer() {
             <footer>
                 {/* Newsletter Section */}
                 <section className="newsletter-section">
+                    <img src={line} alt="customer" className="line" />
+                    <img src={line1} alt="customer" className="line1" />
+                    <img src={vector} alt="customer" className="vector" />
                     <div className="newsletter-content">
                         <div className="newsletter-text">
                             <h1>Subscribe to our newsletter</h1>

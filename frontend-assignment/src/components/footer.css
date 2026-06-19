@@ -1,11 +1,14 @@
 /* Footer Main */
 footer {
+  position: relative;
   width: 100%;
   background: #d7eedc;
+  overflow: hidden;
 }
 
 /* Newsletter Section */
 .newsletter-section {
+  position: relative;
   padding: 60px 40px;
 }
 
@@ -117,25 +120,25 @@ footer {
   width: 163px;
   height: 121px;
   position: absolute;
-  top: 4369px;
-  left: 774.04px;
-
+  top: 0px;
+  left: 50%;
+  
   opacity: 1;
 }
 .line1 {
   width: 163px;
   height: 121px;
   position: absolute;
-  top: 4369px;
-  left: 671px;
-
+  top: 0px;
+  left: 50%;
+  transform: translateX(-85%);
   opacity: 1;
 }
 .vector {
   width: 155px;
   height: 155px;
   position: absolute;
-  top: 4600px;
+  bottom: 32px;
   right: clamp(24px, 8vw, 120px);
   
   opacity: 1;
@@ -145,8 +148,8 @@ footer {
   width: 50px;
   height: 50px;
   position: absolute;
-  top: 3200px;
-  right: -10px;
+  top: 120px;
+  right: 0px;
  
   opacity: 1;
 }

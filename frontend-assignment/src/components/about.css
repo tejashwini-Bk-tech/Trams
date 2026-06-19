@@ -92,7 +92,7 @@
 .about-vector{
   position: absolute;
   top: 2200px;
-  left: 1000px;
+  right: -300px;
   
 }
 .hl-underline::after {

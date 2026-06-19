@@ -64,7 +64,7 @@
   height: 146px;
   position: absolute;
   top: 3660px;
-  left: 1343px;
+  right: clamp(24px, 5vw, 80px);
   opacity: 1;
 }
 .avr2 {
@@ -72,7 +72,7 @@
   height: 90px;
   position: absolute;
   top: 3820px;
-  left: 1250px;
+  right: clamp(150px, 12vw, 210px);
   opacity: 1;
 }
 .avr3 {
@@ -80,7 +80,7 @@
   height: 112px;
   position: absolute;
   top: 3920px;
-  left: 1320px;
+  right: clamp(70px, 8vw, 120px);
   opacity: 1;
 }
 .avr4 {
@@ -88,7 +88,7 @@
   height: 295px;
   position: absolute;
   top: 4050px;
-  left: 1230px;
+  right: clamp(24px, 4vw, 70px);
   opacity: 1;
 }
 @media (max-width: 768px) {
@@ -139,6 +139,7 @@
   line-height: 126px;
   margin: 0;
   letter-spacing: 0;
+  text-align: center;
   @media (max-width: 1024px) {
     font-size: 56px;
     line-height: 68px;

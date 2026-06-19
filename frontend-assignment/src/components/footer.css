@@ -136,7 +136,7 @@ footer {
   height: 155px;
   position: absolute;
   top: 4600px;
-  left: 1222px;
+  right: clamp(24px, 8vw, 120px);
   
   opacity: 1;
 }

@@ -140,6 +140,17 @@ footer {
   
   opacity: 1;
 }
+@media (max-width: 768px) {
+.vector {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 3200px;
+  right: -10px;
+ 
+  opacity: 1;
+}
+}
 /* Responsive */
 @media (max-width: 768px) {
   .footer-columns {

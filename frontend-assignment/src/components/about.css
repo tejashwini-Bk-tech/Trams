@@ -95,6 +95,14 @@
   right: -300px;
   
 }
+@media (max-width: 768px) {
+ .about-vector{
+  position: absolute;
+  top: 1780px;
+  right: -200px;
+  
+}
+}
 .hl-underline::after {
   content: "";
   position: absolute;

@@ -11,11 +11,11 @@ function App() {
   return (
     <div>
       <Navbar />
-      <Hero />
-      <Features />
-      <About />
-      <Testimonial />
-      <Footer />
+        <Hero />
+        <Features />
+        <About />
+        <Testimonial />
+        <Footer />
     </div>
   )
 }

@@ -14,7 +14,7 @@ import './hero.css';
 function hero() {
     return (
         <>
-            <section className="hero">
+            <section id="home" className="hero">
                 <div className="hero-container">
                       <img src={bgVector} alt="" className="hero-vector" />
                        <img src={bgVector1} alt="" className="hero-vector-1" />

@@ -3,7 +3,7 @@ import './about.css';import featureImage from '../assets/vector 2516.png';
 function about() {
     return (
         <>
-            <section className="services">
+            <section id="services" className="services">
                 <img src={featureImage} alt="" className="about-vector" />
                 <div className="services-container">
                     <div className="services-header">

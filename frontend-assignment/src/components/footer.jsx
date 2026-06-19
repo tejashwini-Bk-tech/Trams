@@ -6,7 +6,7 @@ import vector from '../assets/Ellipse 739.png';
 function footer() {
     return (
         <>
-            <footer>
+            <footer id="contact">
                 {/* Newsletter Section */}
                 <section className="newsletter-section">
                     <img src={line} alt="customer" className="line" />

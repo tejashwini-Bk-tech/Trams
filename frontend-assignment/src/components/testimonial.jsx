@@ -14,7 +14,7 @@ import './testimonial.css';
 function testimonial() {
     return (
         <>
-            <section className="testimonials">
+            <section id="faq" className="testimonials">
                 <div className="testimonials-container">
                     <div className="testimonials-left">
                         <div className="testimonial-avatars testimonials-left-group">

@@ -8,7 +8,7 @@ import './features.css';
 function features() {
     return (
         <>
-            <section className="features">
+            <section id="studio" className="features">
                 <article className="feature-block feature-block-left">
                     <img src={featureImage3} alt="" className="feature-vector" />
                     <img src={featureImage3} alt="" className="feature-vector-1" />

@@ -14,6 +14,20 @@ function navBar() {
         setIsMenuOpen(false);
     };
 
+    const handleNavClick = (event, sectionId) => {
+        event.preventDefault();
+        const section = document.querySelector(sectionId);
+
+        if (section) {
+            section.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start',
+            });
+        }
+
+        closeMenu();
+    };
+
     return (
         <>
             <nav className="navbar">
@@ -23,11 +37,11 @@ function navBar() {
                     </div>
                     <div className={`navbar-menu ${isMenuOpen ? 'active' : ''}`}>
                         <ul className="navbar-links">
-                            <li><a href="#home" onClick={closeMenu}>Home</a></li>
-                            <li><a href="#studio" onClick={closeMenu}>Studio</a></li>
-                            <li><a href="#services" onClick={closeMenu}>Services</a></li>
-                            <li><a href="#contact" onClick={closeMenu}>Contact</a></li>
-                            <li><a href="#faq" onClick={closeMenu}>FAQs</a></li>
+                            <li><a href="#home" onClick={(event) => handleNavClick(event, '#home')}>Home</a></li>
+                            <li><a href="#studio" onClick={(event) => handleNavClick(event, '#studio')}>Studio</a></li>
+                            <li><a href="#services" onClick={(event) => handleNavClick(event, '#services')}>Services</a></li>
+                            <li><a href="#contact" onClick={(event) => handleNavClick(event, '#contact')}>Contact</a></li>
+                            <li><a href="#faq" onClick={(event) => handleNavClick(event, '#faq')}>FAQs</a></li>
                         </ul>
                     </div>
                     <div className="navbar-hamburger" onClick={toggleMenu}>

@@ -1,18 +1,24 @@
 import './footer.css';
+import line from '../assets/Vector 2518.png';
+import line1 from '../assets/Vector 2518.png';
+import vector from '../assets/Ellipse 739.png';
 
 function footer() {
     return (
         <>
-            <footer>
+            <footer id="contact">
                 {/* Newsletter Section */}
                 <section className="newsletter-section">
+                    <img src={line} alt="customer" className="line" />
+                    <img src={line1} alt="customer" className="line1" />
+                    <img src={vector} alt="customer" className="vector" />
                     <div className="newsletter-content">
                         <div className="newsletter-text">
                             <h1>Subscribe to our newsletter</h1>
                             <p>To make your stay special and even more memorable</p>
                         </div>
                         <div className="newsletter-form">
-                            <input type="email" placeholder="Enter your email" />
+                            
                             <button>Subscribe Now</button>
                         </div>
                     </div>

@@ -1,84 +1,90 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Outfit:wght@400;500&display=swap');
+@import "tailwindcss";
 
-/* Tailwind directives */
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-/* Design system */
-:root {
-  --text: #6b6375;
-  --text-h: #08060d;
-  --bg: #fff;
-  --border: #e5e4e7;
-  --code-bg: #f4f3ec;
-  --accent: #aa3bff;
-  --accent-bg: rgba(170, 59, 255, 0.1);
-  --accent-border: rgba(170, 59, 255, 0.5);
-  --social-bg: rgba(244, 243, 236, 0.5);
-  --shadow: rgba(0,0,0,0.1) 0 10px 15px -3px, rgba(0,0,0,0.05) 0 4px 6px -2px;
-
-  --sans: 'Inter', sans-serif;
-  --heading: 'Outfit', sans-serif;
-  --mono: ui-monospace, Consolas, monospace;
-
-  /* Typography scale */
-  --fs-xs: clamp(12px, 1vw, 14px);
-  --fs-sm: clamp(14px, 1.2vw, 16px);
-  --fs-md: clamp(18px, 1.5vw, 20px);
-  --fs-lg: clamp(24px, 2vw, 32px);
-  --fs-xl: clamp(32px, 3vw, 48px);
-  --fs-hero: clamp(40px, 5.42vw, 100px);
-}
-
-@media (max-width: 1024px) {
-  :root {
-    font-size: 16px;
-  }
-}
-
-/* Global resets */
-* {
-  margin: 0;
-  padding: 0;
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
-html, body {
-  margin: 0;
-  padding: 0;
+html,
+body,
+#root {
   width: 100%;
-  overflow-x: hidden;
+  max-width: 100%;
+  overflow-x: clip;
 }
 
-/* Dark mode */
-@media (prefers-color-scheme: dark) {
-  :root {
-    --text: #9ca3af;
-    --text-h: #f3f4f6;
-    --bg: #16171d;
-    --border: #2e303a;
-    --code-bg: #1f2028;
-    --accent: #c084fc;
-    --accent-bg: rgba(192, 132, 252, 0.15);
-    --accent-border: rgba(192, 132, 252, 0.5);
-    --social-bg: rgba(47, 48, 58, 0.5);
-    --shadow: rgba(0,0,0,0.4) 0 10px 15px -3px, rgba(0,0,0,0.25) 0 4px 6px -2px;
+body {
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px;
+}
+
+img {
+  max-width: 100%;
+}
+
+@keyframes pageReveal {
+  from {
+    opacity: 0;
+    transform: translateY(36px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero,
+
+footer {
+  animation: pageReveal 0.8s ease both;
+}
+
+.hero {
+  animation-delay: 0.05s;
+}
+
+.features {
+  animation-delay: 0.15s;
+}
+
+.services {
+  animation-delay: 0.25s;
+}
+
+.testimonials {
+  animation-delay: 0.35s;
+}
+
+footer {
+  animation-delay: 0.45s;
+}
+
+@supports (animation-timeline: view()) {
+  .features,
+  .services,
+  .testimonials,
+  footer {
+    animation-delay: 0s;
+    animation-timeline: view();
+    animation-range: entry 0% cover 28%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
   }
 
-  #social .button-icon {
-    filter: invert(1) brightness(2);
+  .hero,
+  .features,
+  .services,
+  .testimonials,
+  footer {
+    animation: none;
   }
 }
-
-/* Base typography */
-h1, h2 {
-  font-family: var(--heading);
-  font-weight: 400;
-  font-style: normal;
-  color: var(--text-h);
-  text-align: center;
-  letter-spacing: 0;
-}
-
-/* Retain existing component styles – they remain in their own files */

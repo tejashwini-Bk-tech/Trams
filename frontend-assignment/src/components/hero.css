@@ -168,25 +168,155 @@
 .pair-4 img:last-child {
   margin-top: 50px; /* adjust */
 }
-/* Stack the photos in a centered, wrapping row on small screens so they
-   never overlap or spill off-screen. */
-@media (max-width: 768px) {
-  .hero-images {
+/* =========================
+   Tablet (1024px and below)
+   ========================= */
+@media (max-width: 1024px) {
+  .hero {
+    padding: 60px 20px;
+  }
+
+  .hero-title {
+    font-size: 64px;
+    line-height: 80px;
+  }
+
+  .hero-description {
+    width: 90%;
     height: auto;
+    font-size: 20px;
+    line-height: 32px;
   }
 
   .hero-image-group {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    gap: clamp(12px, 3vw, 20px);
-    height: auto;
+    gap: 10%;
   }
 
-  .hero-image-pair {
-    position: static;
+  .hero-vector,
+  .hero-vector-1,
+  .hero-vector-2 {
+    transform: scale(0.8);
   }
+}
+
+/* =========================
+   Mobile (768px and below)
+   ========================= */
+@media (max-width: 768px) {
+  .hero-container {
+    padding: 0 10px;
+  }
+
+  .hero-title {
+    font-size: 42px;
+    line-height: 52px;
+  }
+
+  .hero-description {
+    width: 100%;
+    font-size: 18px;
+    line-height: 28px;
+    margin-top: 20px;
+  }
+
+  .hero-images {
+    height: auto;
+    margin-top: 40px;
+  }
+
+  .hero-image-group {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    justify-items: center;
+  }
+
+  .hero-image-pair img {
+    width: 90px;
+    height: 90px;
+  }
+
+  /* Reset all desktop positioning */
+  .pair-1 img:first-child,
+  .pair-2 img:first-child,
+  .pair-3 img:first-child,
+  .pair-4 img:first-child {
+    position: static;
+    border: 4px solid #fff;
+  }
+
+  .pair-1 img:last-child,
+  .pair-2 img:last-child,
+  .pair-3 img:last-child,
+  .pair-4 img:last-child {
+    margin-top: 0;
+  }
+
+  .hero-vector,
+  .hero-vector-1,
+  .hero-vector-2 {
+    display: none;
+  }
+}
+
+/* =========================
+   Small Mobile (480px)
+   ========================= */
+@media (max-width: 480px) {
+  .hero {
+    padding: 40px 15px;
+  }
+
+  .hero-title {
+    font-size: 32px;
+    line-height: 40px;
+  }
+
+  .hero-description {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+@media (max-width: 768px) {
+  /* Container for the pair of images */
+  .hero-image-pair {
+    position: relative;
+    width: 100px;
+    height: 90px;
+    gap: 20px;
+  }
+
+  /* Base styling for both images */
+  .hero-image-pair img {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%; /* Optional: ensures they look circular */
+    object-fit: cover;
+  }
+
+  /* First image (stays at the start) */
+  .hero-image-pair img:first-child {
+    top: 0;
+    left: 0;
+    z-index: 1; /* Keeps the first image behind or on top as needed */
+  }
+
+  /* Second image (overlaps the first) */
+  .hero-image-pair img:last-child {
+    top: 15px; /* Adjust vertical overlap */
+    left: 40px; /* Adjusted to create a tighter overlap */
+    z-index: 2; /* Ensures it sits on top */
+  }
+
+  /* Flex container for all pairs */
+  .hero-image-group {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Allows wrapping if there are many pairs */
+    gap: 15px;
+  }
+}
 }
 
 @keyframes fadeInUp {

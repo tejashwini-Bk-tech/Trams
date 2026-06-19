@@ -91,7 +91,18 @@
   left: 1230px;
   opacity: 1;
 }
-
+@media (max-width: 768px) {
+  .av1,
+  .av2,
+  .av3,
+  .av4,
+  .avr1,
+  .avr2,
+  .avr3,
+  .avr4 {
+    display: none;
+  }
+}
 .testimonials-right-group {
   grid-template-columns: repeat(2, 1fr);
 }
